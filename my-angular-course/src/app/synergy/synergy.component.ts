@@ -3,7 +3,9 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-synergy',
   templateUrl: './synergy.component.html',
-  styleUrls: ['./synergy.component.css']
+  styles: [`p{
+    color: black;
+}`]
 })
 export class SynergyComponent implements OnInit {
 

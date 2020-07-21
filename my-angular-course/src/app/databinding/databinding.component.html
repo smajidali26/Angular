@@ -1,0 +1,22 @@
+<p>databinding works!</p>
+Today is {{day}} and date is {{date}}
+
+<button [disabled]="!disable">Click Me</button>
+<br/>
+<input type="text" (input)="onInput($event)"/>
+
+<br/>
+
+
+
+<ul>
+    <li *ngFor="let employee of synergyEmployees">
+            {{employee}}
+    </li>
+</ul>
+
+<p *ngIf="disable">Synergy Employees</p>
+
+<input type="text" [(ngModel)]="someText"/>
+
+{{someText}}
