@@ -7,6 +7,10 @@ import { SynergyComponent } from './synergy/synergy.component';
 import { AttributeComponent } from './attribute/attribute.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import {FormsModule} from '@angular/forms';
+import { EmployeesComponent } from './employees/employees.component';
+import { EmployeeComponent } from './employee/employee.component';
+import {EmployeeService} from './employee.service';
+import{LoggingService} from './logging.service';
 
 @NgModule({
   declarations: [
@@ -14,13 +18,15 @@ import {FormsModule} from '@angular/forms';
     CovidComponent,
     SynergyComponent,
     AttributeComponent,
-    DatabindingComponent
+    DatabindingComponent,
+    EmployeesComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [EmployeeService,LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

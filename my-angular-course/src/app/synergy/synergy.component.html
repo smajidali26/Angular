@@ -1,5 +1,14 @@
-<p>synergy works!</p>
-<!--<div app-attribute></div>-->
+
+<!--<div app-attribute></div>
 <div class="app-attribute"></div>
 
-<app-databinding></app-databinding>
+<app-databinding></app-databinding>-->
+
+<app-employee (emlopyeeAdded)="emlopyeeAdded($event)"></app-employee>
+<br/><br/>
+<div class="row">
+<app-employees *ngFor="let emp of employees"
+[employee]="emp"
+
+></app-employees>
+</div>
