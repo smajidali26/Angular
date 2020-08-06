@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {Routes,RouterModule} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { CovidComponent } from './covid/covid.component';
@@ -11,6 +12,15 @@ import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeComponent } from './employee/employee.component';
 import {EmployeeService} from './employee.service';
 import{LoggingService} from './logging.service';
+import { HomeComponent } from './home/home.component';
+import { RoutedynamicdataComponent } from './routedynamicdata/routedynamicdata.component';
+
+const applicationRoutes : Routes =[
+  {path:'',component:HomeComponent},
+  {path:'nabeel',component:SynergyComponent},
+  {path:'covid',component:CovidComponent},
+  {path:'dynamicdata/:id/:name/:age',component:RoutedynamicdataComponent}
+]
 
 @NgModule({
   declarations: [
@@ -20,11 +30,14 @@ import{LoggingService} from './logging.service';
     AttributeComponent,
     DatabindingComponent,
     EmployeesComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    HomeComponent,
+    RoutedynamicdataComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(applicationRoutes)
   ],
   providers: [EmployeeService,LoggingService],
   bootstrap: [AppComponent]
