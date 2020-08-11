@@ -3,7 +3,6 @@
       <p>{{ employee.name }}</p>
       <hr>
       <p> {{ employee.designation }}</p>
-      <br/>
-      <br/>
+      <a [routerLink]="['/dynamicdata',employee.id]">Display Data</a>
     </div>
   </div>

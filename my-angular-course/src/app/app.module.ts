@@ -14,13 +14,15 @@ import {EmployeeService} from './employee.service';
 import{LoggingService} from './logging.service';
 import { HomeComponent } from './home/home.component';
 import { RoutedynamicdataComponent } from './routedynamicdata/routedynamicdata.component';
-
-const applicationRoutes : Routes =[
+import {AppRoutingModule} from './app-routing.module';
+import { NotFoundComponent } from './not-found/not-found.component';
+/*const applicationRoutes : Routes =[
   {path:'',component:HomeComponent},
   {path:'nabeel',component:SynergyComponent},
   {path:'covid',component:CovidComponent},
-  {path:'dynamicdata/:id/:name/:age',component:RoutedynamicdataComponent}
-]
+  //{path:'dynamicdata/:id/:name/:age',component:RoutedynamicdataComponent}
+  {path:'dynamicdata/:id',component:RoutedynamicdataComponent}
+]*/
 
 @NgModule({
   declarations: [
@@ -32,12 +34,14 @@ const applicationRoutes : Routes =[
     EmployeesComponent,
     EmployeeComponent,
     HomeComponent,
-    RoutedynamicdataComponent
+    RoutedynamicdataComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(applicationRoutes)
+    AppRoutingModule
+    //RouterModule.forRoot(applicationRoutes)
   ],
   providers: [EmployeeService,LoggingService],
   bootstrap: [AppComponent]

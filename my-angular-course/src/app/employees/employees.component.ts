@@ -7,7 +7,7 @@ import { Component, OnInit,Input } from '@angular/core';
 })
 export class EmployeesComponent implements OnInit {
 
-  @Input() employee: {name: string, designation: string};
+  @Input() employee: {id:number, name: string, designation: string};
   constructor() { }
 
   ngOnInit(): void {
