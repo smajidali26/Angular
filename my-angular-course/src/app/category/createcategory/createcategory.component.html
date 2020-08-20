@@ -1,0 +1,10 @@
+<form class="was-validated" [formGroup]="categoryCreateForm" (ngSubmit)="OnCategoryCreate()">
+  <div class="form-group">
+    <label for="uname">Category Name:</label>
+    <input type="text" class="form-control" id="categoryName"
+    formControlName="CategoryName" required>
+
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

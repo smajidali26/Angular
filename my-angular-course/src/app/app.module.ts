@@ -7,7 +7,7 @@ import { CovidComponent } from './covid/covid.component';
 import { SynergyComponent } from './synergy/synergy.component';
 import { AttributeComponent } from './attribute/attribute.component';
 import { DatabindingComponent } from './databinding/databinding.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { EmployeesComponent } from './employees/employees.component';
 import { EmployeeComponent } from './employee/employee.component';
 import {EmployeeService} from './employee.service';
@@ -16,6 +16,11 @@ import { HomeComponent } from './home/home.component';
 import { RoutedynamicdataComponent } from './routedynamicdata/routedynamicdata.component';
 import {AppRoutingModule} from './app-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { TemplateformComponent } from './templateform/templateform.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { CategoryComponent } from './category/category.component';
+import { CreatecategoryComponent } from './category/createcategory/createcategory.component';
+import {HttpClientModule} from '@angular/common/http';
 /*const applicationRoutes : Routes =[
   {path:'',component:HomeComponent},
   {path:'nabeel',component:SynergyComponent},
@@ -35,12 +40,18 @@ import { NotFoundComponent } from './not-found/not-found.component';
     EmployeeComponent,
     HomeComponent,
     RoutedynamicdataComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    TemplateformComponent,
+    ReactiveformComponent,
+    CategoryComponent,
+    CreatecategoryComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule,
     //RouterModule.forRoot(applicationRoutes)
   ],
   providers: [EmployeeService,LoggingService],

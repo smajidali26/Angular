@@ -1,0 +1,26 @@
+<a class="nav-link" routerLinkActive="active" routerLink="/categorycreate">New Category</a>
+<div class="card">
+
+  <div class="table-responsive">
+    <table class="table" *ngIf="categories && categories.length">
+      <thead>
+        <tr>
+          <th>Category name</th>
+          <th>Description</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let s of categories">
+          <td>{{ s.CategoryName }}</td>
+          <td>{{ s.Description }}</td>
+          <td>
+            <a><i class="fa fa-pencil-square-o"></i></a>
+            |<a><i class="fa fa-trash-o fa-fw"></i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="text-danger">{{ errorMessage }}</div>
+</div>

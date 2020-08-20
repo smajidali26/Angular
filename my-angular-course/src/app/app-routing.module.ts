@@ -6,7 +6,10 @@ import { SynergyComponent } from './synergy/synergy.component';
 import { HomeComponent } from './home/home.component';
 import { RoutedynamicdataComponent } from './routedynamicdata/routedynamicdata.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-
+import { TemplateformComponent } from './templateform/templateform.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { CategoryComponent } from './category/category.component';
+import { CreatecategoryComponent } from './category/createcategory/createcategory.component';
 const applicationRoutes : Routes =[
 
   {path:'',component:HomeComponent},
@@ -15,6 +18,10 @@ const applicationRoutes : Routes =[
   //{path:'dynamicdata/:id/:name/:age',component:RoutedynamicdataComponent}
   {path:'dynamicdata/:id',component:RoutedynamicdataComponent},
   {path:'notfound',component:NotFoundComponent},
+  {path:'templateform',component:TemplateformComponent},
+  {path:'reactiveform',component:ReactiveformComponent},
+  {path:'categories',component:CategoryComponent},
+  {path:'categorycreate',component:CreatecategoryComponent},
   {path:'**',redirectTo:'/notfound'}
 ]
 
